@@ -1,0 +1,106 @@
+[
+    {
+        "banner": "Dänkeimmät meemimme",
+        "plural": true,
+        "buttons": {
+            "yes": "good shit",
+            "no": "absolutely haram"
+        }
+    },
+    {
+        "banner": "Harvinaisimmat pepemme",
+        "plural": true,
+        "buttons": {
+            "yes": "Kyllä kiitos",
+            "no": "Pepe on vihasymboli"
+        }
+    },
+    {
+        "banner": "Possessiivisuffiksimme",
+        "plural": false,
+        "buttons": {
+            "yes": "  ",
+            "no": "  "
+        }
+    },
+    {
+        "banner": "Parhaat tarramme",
+        "plural": true,
+        "buttons": {
+            "yes": "Gibe",
+            "no": "Plz no"
+        }
+    },
+    {
+        "banner": "Timanttisimmat olotilamme",
+        "plural": true,
+        "buttons": {
+            "yes": "Mikä on KJYR?",
+            "no": "Olen kasuaali"
+        }
+    },
+    {
+        "banner": "Nopeimmat excu-ilmomme",
+        "plural": true,
+        "buttons": {
+            "yes": "Mahtuispa Reaktoriin :(",
+            "no": "Keskityn opiskeluun"
+        }
+    },
+    {
+        "banner": "Aktiivimme",
+        "plural": true,
+        "buttons": {
+            "yes": "börk",
+            "no": "Palaan IRC:iin"
+        }
+    },
+    {
+        "banner": "Changimme",
+        "plural": false,
+        "buttons": {
+            "yes": "Osaispa lapioida",
+            "no": "Vaan 2 noppaa :("
+        }
+    },
+    {
+        "banner": "Syntymäpäivälaulumme",
+        "plural": false,
+        "buttons": {
+            "yes": "Onnea Känniselle!",
+            "no": ""
+        }
+    },
+    {
+        "banner": "Keskikokoinen fanimme",
+        "plural": false,
+        "buttons": {
+            "yes": "Nautin tästä",
+            "no": "Olen fanifoobikko"
+        }
+    },
+    {
+        "banner": "Pk:mme",
+        "plural": false,
+        "buttons": {
+            "yes": "TAAS LÄHTEE SAATANA!",
+            "no": "Defenestroin itseni"
+        }
+    },
+    {
+        "banner": "Kassamme",
+        "plural": false,
+        "buttons": {
+            "yes": "Pärr pärr",
+            "no": "Mee nyt vittuun"
+        }
+    },
+    {
+        "banner": "Klusterimme",
+        "plural": false,
+        "buttons": {
+            "yes": "Oispa",
+            "no": "En kestä enää"
+        }
+    }
+]
