@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nf start -p 3000 -j Procfile.dev",
     "server-dev": "SET PORT=3001 && node server.js",
-    "server": "cd client && npm run build && cd .. && PORT=80 && node server.js",
+    "server": "PORT=80 && node server.js",
+    "postinstall": "cd client && npm run build-noglobal && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joona Heikkilä",
