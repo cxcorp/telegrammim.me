@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "nf start -p 3000",
-    "server": "SET PORT=3001 && node server.js",
-    "server-prod": "cd client && npm run build && cd .. && PORT=80 && node server.js",
+    "start": "nf start -p 3000 -j Procfile.dev",
+    "server-dev": "SET PORT=3001 && node server.js",
+    "server": "cd client && npm run build && cd .. && PORT=80 && node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Joona Heikkilä",
