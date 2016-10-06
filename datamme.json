@@ -11,7 +11,7 @@
         "banner": "Harvinaisimmat pepemme",
         "plural": true,
         "buttons": {
-            "yes": "Kyllä kiitos",
+            "yes": "Kyllä kiitos!",
             "no": "Pepe on vihasymboli"
         }
     },
@@ -64,11 +64,11 @@
         }
     },
     {
-        "banner": "Syntymäpäivälaulumme",
+        "banner": "Kännisemme",
         "plural": false,
         "buttons": {
-            "yes": "Onnea Känniselle!",
-            "no": ""
+            "yes": "Hyvää syntymäpäivää!",
+            "no": "Kuka?"
         }
     },
     {
@@ -83,8 +83,8 @@
         "banner": "Pk:mme",
         "plural": false,
         "buttons": {
-            "yes": "TAAS LÄHTEE SAATANA!",
-            "no": "Defenestroin itseni"
+            "yes": "Taas mennään saatana!",
+            "no": "Defenestroin mieluummin itseni"
         }
     },
     {
