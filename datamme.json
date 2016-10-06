@@ -68,7 +68,7 @@
         "plural": false,
         "buttons": {
             "yes": "Hyvää syntymäpäivää!",
-            "no": "Kuka?"
+            "no": "Ketä?"
         }
     },
     {
@@ -101,6 +101,14 @@
         "buttons": {
             "yes": "Oispa",
             "no": "En kestä enää"
+        }
+    },
+    {
+        "banner": "Aurinkojumalamme",
+        "plural": false,
+        "buttons": {
+            "yes": "Mirraamaan",
+            "no": "Kadehtimaan"
         }
     }
 ]
