@@ -1,13 +1,12 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const winston = require('winston');
 const app = require('express')();
-const Config = require('./Config');
+const Logger = require('./Logger.js');
+const Config = require('./Config.js');
+const CachedReader = require('./CachedReader.js');
 
-//app.get('*', function(req, res) {
-//    res.redirect(303, 'tg url here');
-//});
+const dataReader = new CachedReader(Config.DataFile, 10); // 5min cache life
 
 app.use(function(req, res, next) {
     res.setHeader('Cache-Control', 'no-cache'); // no cacherino
@@ -15,22 +14,20 @@ app.use(function(req, res, next) {
 });
 
 app.get('/api/random', function(req, res) {
-    fs.readFile(Config.DataFile, function(err, data) {
+    dataReader.read((err, data) => {
         if (err) {
-            winston.log('error', 'Reading data file failed!', {
-                DataFile: Config.DataFile,
-                Error: err
-            });
-            process.exit(1);
+            res.status(500)
+               .json({ error: 'An internal server error has occurred.' });
+            return;
         }
 
-        let randomData = getRandomDataSnippet(JSON.parse(data));
-        res.json(randomData);
+        let response = getRandomDataSnippet(JSON.parse(data));
+        res.json(response);
     });
 });
 
 app.listen(Config.Port, function() {
-    winston.log('info', 'Server started!', {
+    Logger.log('info', 'Server started!', {
         DataFile: Config.DataFile,
         Port: Config.Port
     });
