@@ -1,21 +1,18 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const app = require('express')();
+const express = require('express');
+const app = express();
 const Logger = require('./Logger.js');
 const Config = require('./Config.js');
 const CachedReader = require('./CachedReader.js');
 
 const dataReader = new CachedReader(Config.DataFile, 10); // 5min cache life
 
-app.use(function(req, res, next) {
-    res.setHeader('Cache-Control', 'no-cache'); // no cacherino
-    next();
-});
-
 app.use(express.static('./client/build'));
 
 app.get('/api/random', function(req, res) {
+    res.setHeader('Cache-Control', 'no-cache'); // no cacherino
     dataReader.read((err, data) => {
         if (err) {
             res.status(500)
