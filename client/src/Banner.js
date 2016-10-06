@@ -1,9 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
+import './styles/Banner.css'
 
 const Banner = (props) => (
-    <div className='Banner Slow-rotation'>
+    <div className='banner banner--tilt_slow'>
         <h1>
-            <span className='Banner-text'>{props.header}</span> {props.plural ? 'odottavat' : 'odottaa'} sinua Telegrammissa!
+            <span className='banner__punchline'>{props.header}</span> {props.plural ? 'odottavat' : 'odottaa'} sinua Telegrammissa!
         </h1>
     </div>
 );

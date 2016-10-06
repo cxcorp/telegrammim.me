@@ -1,8 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
+import './styles/Button.css';
 
 const Button = ({label, action}) => {
     return (
-        <div className='Button' onClick={action}>
+        <div className='button' onClick={action}>
             <p>{label}</p>
         </div>
     )

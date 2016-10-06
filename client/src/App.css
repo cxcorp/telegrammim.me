@@ -39,64 +39,8 @@ body {
   to { transform: rotate(360deg); }
 }
 
-@keyframes Slow-rotation {
-  from { transform: rotate(-2deg); }
-  to { transform: rotate(2deg); }
-}
-
-.Slow-rotation {
-  animation-name: Slow-rotation;
-  animation-duration: 4s;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-.Bold {
-  font-weight: bold;  
-}
-
-.Banner {
-  display: inline-block;
-  margin-top: 5em;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 36px;
-
-  
-}
-
-.Banner-text {
-  display: inline-block;
-  padding: 12px;
-  font-size: 0.7em;
-  position: relative;
-  vertical-align: 0.12em;
-  font-family: Consolas;
-  text-shadow:0 1px 0 #fff;
-
-  background: #f4f4f4;
-  background: -moz-linear-gradient(top, #f4f4f4 0%, #f6f6f6 53%, #fdfdfd 100%);
-  background: -webkit-linear-gradient(top, #f4f4f4 0%,#f6f6f6 53%,#fdfdfd 100%);
-  background: linear-gradient(to bottom, #f4f4f4 0%,#f6f6f6 53%,#fdfdfd 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f4f4f4', endColorstr='#fdfdfd',GradientType=0 );
-
-  -webkit-box-shadow: 1px 1px 2px 0px rgba(48,48,48,1);
-  -moz-box-shadow: 1px 1px 2px 0px rgba(48,48,48,1);
-  box-shadow: 1px 1px 2px 0px rgba(48,48,48,1);
-}
-
 .Buttons {
   display: inline-block;
   margin: 0 auto;
   margin-top: 3em;
-}
-
-.Button {
-  cursor: pointer;
-  display: inline-block;
-  margin: 0 auto;
-}
-
-.Button:first-of-type {
-  margin-right: 2em;
 }

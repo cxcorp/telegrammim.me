@@ -1,0 +1,9 @@
+.button {
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.button:first-of-type {
+  margin-right: 2em;
+}

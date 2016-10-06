@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import Button from './Button.js';
-
+// TODO: Get rid of this, what was I thinking?
 class Buttons extends Component {
     render() {
         return (
