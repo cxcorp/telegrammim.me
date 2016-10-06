@@ -13,6 +13,8 @@ app.use(function(req, res, next) {
     next();
 });
 
+app.use(express.static('./client/build'));
+
 app.get('/api/random', function(req, res) {
     dataReader.read((err, data) => {
         if (err) {
