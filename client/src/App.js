@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Reset.css';
 import './App.css';
 import Banner from './Banner.js';
 import Buttons from './Buttons.js'
@@ -44,6 +45,7 @@ class App extends Component {
     return (
       <div className='App'>
         <Banner header={this.state.data.banner} plural={this.state.data.plural} />
+        <br />
         <Buttons labels={this.state.data.buttons} />
       </div>
     );

@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 
 const Button = ({label, action}) => {
     return (
-        <input className='Button' type='button' value={label} onClick={action}/>
+        <div className='Button' onClick={action}>
+            <p>{label}</p>
+        </div>
     )
 };
 
