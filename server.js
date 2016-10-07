@@ -9,7 +9,7 @@ const CachedReader = require('./CachedReader.js');
 
 const dataReader = new CachedReader(Config.DataFile, 10); // 5min cache life
 
-if (process.env.NODE_ENV !== 'production') {
+if (process.env.NODE_ENV === 'production') {
     // dev mode's frontend is provided by create-react-app's dev server
     app.use(express.static('./client/build'));
 }
