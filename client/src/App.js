@@ -15,16 +15,15 @@ class App extends Component {
     fetch('/api/random')
       .then(response => {
         if (response.status !== 200 && response.status !== 304) {
-          console.group('Couldn\'t fetch /api/random! Response:');
-          console.log(response);
-          console.groupEnd();
+          // TODO: ui for errors
+          console.log('Couldn\'t fetch /api/random! Response:', response);
           return;
         }
 
-        response.json().then(data => {
-          console.group('/api/random success: ');
-          console.log(data);
-          console.groupEnd();
+        response
+        .json()
+        .then(data => {
+          console.log('/api/random success: ', data);
           this.setState({data: data});
         })
       })
