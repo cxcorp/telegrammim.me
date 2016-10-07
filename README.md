@@ -3,7 +3,17 @@ work in progress ~
 
 ## todo
 
+### server
 - [ ] use `filecache` instead of shabby own solution
+- [ ] recaptcha
 
+### front
+- [ ] create button styles
+- [ ] create `yes` button modal/whatever for recaptcha
+  - [ ] modal
+  - [ ] recaptcha
 - [ ] animate flying telegram paper planes 
-  - ![](https://raw.githubusercontent.com/cxcorp/telegrammim.me/master/client/src/Telegram_logo_nocircle.svg)
+  - ![](http://i.imgur.com/pKktmHR.png)
+  - flying from bottom left to top right, `transform-origin: top right`, slight wind-ish rotation left and right
+    - [ ] flying
+    - [ ] rotating
