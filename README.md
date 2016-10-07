@@ -4,6 +4,7 @@ work in progress ~
 ## todo
 
 ### server
+- [ ] `Buttons` is bad and you should feel bad
 - [ ] use `filecache` instead of shabby own solution
 - [ ] recaptcha
 
