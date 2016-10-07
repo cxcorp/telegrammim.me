@@ -1,0 +1,13 @@
+.app {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.app__loadingBanner {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em;
+}

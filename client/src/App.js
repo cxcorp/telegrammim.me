@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import './Reset.css';
-import './App.css';
 import Banner from './Banner.js';
 import Buttons from './Buttons.js'
+import './styles/Reset.css';
+import './styles/App.css';
 
 class App extends Component {
   constructor(props) {
@@ -36,14 +36,14 @@ class App extends Component {
   render() {
     if (this.state.data === null) {
       return (
-        <div className='App'>
-          <h1>Lataa...</h1>
+        <div className='app'>
+          <h1 className='app__loadingBanner'>Lataa...</h1>
         </div>
       );
     }
 
     return (
-      <div className='App'>
+      <div className='app'>
         <Banner header={this.state.data.banner} plural={this.state.data.plural} />
         <br />
         <Buttons labels={this.state.data.buttons} />

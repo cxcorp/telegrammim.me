@@ -4,7 +4,7 @@ import './styles/Banner.css'
 const Banner = (props) => (
     <div className='banner banner--tilt_slow'>
         <h1>
-            <span className='banner__punchline'>{props.header}</span> {props.plural ? 'odottavat' : 'odottaa'} sinua Telegrammissa!
+            <span className='banner__punchline'>{props.header}</span> {props.plural ? 'odottavat' : 'odottaa'} sinua Memegrammissa!
         </h1>
     </div>
 );
