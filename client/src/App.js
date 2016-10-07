@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Banner from './Banner.js';
 import Buttons from './Buttons.js'
+import LoadingSpinner from './LoadingSpinner.js'
 import './styles/Reset.css';
 import './styles/App.css';
 
@@ -36,6 +37,7 @@ class App extends Component {
     if (this.state.data === null) {
       return (
         <div className='app'>
+          <LoadingSpinner />
           <h1 className='app__loadingBanner'>Lataa...</h1>
         </div>
       );

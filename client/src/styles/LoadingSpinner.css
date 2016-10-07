@@ -1,0 +1,99 @@
+.loading-spinner {
+    width: 10em;
+    height: 10em;
+    position: relative;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.loading-spinner__circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-width: 0.35em;
+    border-style: solid;
+    /* color defined by React */
+}
+
+@keyframes circle-topmost {
+    /* up and down */
+    0% {
+        transform: scale(1.02, 1.02);
+    }
+    100% {
+        transform: scale(0.99, 0.99);
+    }
+}
+
+@keyframes circle-1 {
+    /* up and down */
+    0% {
+        transform: translate(0, -0.1em) scale(1.02, 1.02);
+    }
+    100% {
+        transform: translate(0, 0.1em) scale(0.99, 0.99);
+    }
+}
+
+@keyframes circle-2 {
+    /* up and down */
+    0% {
+        transform: translate(0.05em, 0.0866em) scale(1.03, 1.03);
+        /* polar coords: r=0.1, θ=240deg */
+    }
+    100% {
+        transform: translate(-0.05em, -0.0866em) scale(0.99, 0.99);
+        /* polar coords: r=0.1, θ=60deg */
+    }
+}
+
+@keyframes circle-3 {
+    /* up and down */
+    0% {
+        transform: translate(-0.05em, 0.0866em) scale(1.04, 1.04);
+        /* polar coords: r=0.1, θ=120deg */
+    }
+    100% {
+        transform: translate(0.05em, -0.0866em) scale(0.99, 0.99);
+        /* polar coords: r=0.1, θ=300deg */
+    }
+}
+
+.loading-spinner__circle--topmost {
+    animation: circle-topmost;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+    box-shadow: none !important;
+}
+
+.loading-spinner__circle--1 {
+    animation: circle-1;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.loading-spinner__circle--2 {
+    animation: circle-2;
+    animation-delay: 1s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
+
+.loading-spinner__circle--3 {
+    animation: circle-3;
+    animation-delay: 2s;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-timing-function: ease-in-out;
+}
