@@ -9,7 +9,10 @@ const CachedReader = require('./CachedReader.js');
 
 const dataReader = new CachedReader(Config.DataFile, 10); // 5min cache life
 
-app.use(express.static('./client/build'));
+if (process.env.NODE_ENV !== 'production') {
+    // dev mode's frontend is provided by create-react-app's dev server
+    app.use(express.static('./client/build'));
+}
 
 app.get('/api/random', function(req, res) {
     res.setHeader('Cache-Control', 'no-cache'); // no cacherino
