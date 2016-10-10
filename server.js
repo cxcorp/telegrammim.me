@@ -7,7 +7,7 @@ const Logger = require('./Logger.js');
 const Config = require('./Config.js');
 const CachedReader = require('./CachedReader.js');
 
-const dataReader = new CachedReader(Config.DataFile, 10); // 5min cache life
+const dataReader = new CachedReader(Config.DataFile);
 
 if (process.env.NODE_ENV === 'production') {
     // dev mode's frontend is provided by create-react-app's dev server

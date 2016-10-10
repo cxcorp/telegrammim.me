@@ -3,36 +3,54 @@ const fs = require('fs');
 const path = require('path');
 const Logger = require('./Logger.js');
 
-class CachedReader {
-    constructor(filePath, maxCacheAge) {
-        this.maxCacheAge = maxCacheAge * 1000; // seconds to ms
-        this.cache = null;
-        this.lastRead = 0;
 
-        this.updateCache = ((callbackUpdateDone) => {
-            fs.readFile(filePath, (err, data) => {
+class CachedReader {
+    constructor(filePath) {
+        this.filePath = filePath;
+        this.expired = true;
+        this.cache = null;
+
+        this.updateCache = (callback) => {
+            fs.readFile(this.filePath, (err, data) => {
                 if (err) {
-                    Logger.log('error', 'Reading data file failed!', {
-                        Path: filePath,
+                    Logger.log(
+                        'error',
+                        'An error occurred while updating the cache! Keeping the old cache intact.',
+                        {
+                        DataFile: this.filePath,
                         Error: err
                     });
+                    callback(err, data);
+                    return;
                 }
 
                 this.cache = data;
-                this.lastRead = Date.now();
-                Logger.log('verbose', 'Finished updating data cache.', {
-                    MaxCacheAge: this.maxCacheAge
-                });
-                callbackUpdateDone(err, data);
+                this.expired = false;
+                Logger.log('verbose', 'Updated cache. Marking cache expired.');
+                callback(err, data);
             });
+        };
+
+        fs.watch(filePath, {
+            persistent: false
+        }, (eventType, file) => {
+            if (eventType === 'rename') {
+                Logger.log('warning', 'Data file was renamed!', {
+                    DataFile: this.filePath,
+                    NewName: file
+                });
+            } else if (eventType === 'change') {
+                Logger.log('info', 'Data file changed!', {
+                    DataFile: file
+                });
+            }
+
+            this.expired = true;
         });
     }
 
-    read(callback) { // callback = function(err, data)
-        const now = Date.now();
-        const age = now - this.lastRead;
-
-        if (age > this.maxCacheAge) {
+    read(callback) {
+        if (this.expired) {
             this.updateCache(callback);
             return;
         }
