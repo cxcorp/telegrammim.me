@@ -14,4 +14,10 @@ const Button = ({label, color, action}) => {
     )
 };
 
+Button.propTypes = {
+    label: React.PropTypes.string.isRequired,
+    color: React.PropTypes.string.isRequired,
+    action: React.PropTypes.func
+};
+
 export default Button;
