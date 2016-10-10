@@ -1,6 +1,7 @@
 .app {
   font-family: 'Roboto', sans-serif;
   text-align: center;
+  margin-top: calc(50vh - 2em);
 }
 
 .app__loadingBanner {
