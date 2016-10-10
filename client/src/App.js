@@ -33,11 +33,11 @@ class App extends Component {
   }
   
   yesClicked() {
-
+    alert('ayy');
   }
 
   noClicked() {
-
+    history.back();
   }
 
   render() {
@@ -55,7 +55,7 @@ class App extends Component {
         <br />
         <div className='app__buttons'>
           <Button label={this.state.data.buttons.yes} color='#51cc84' action={this.yesClicked.bind(this)} />
-          <Button label={this.state.data.buttons.no} color='#e5675b' action={this.yesClicked.bind(this)} />
+          <Button label={this.state.data.buttons.no} color='#c0392b' action={this.noClicked.bind(this)} />
         </div>
       </div>
     );
