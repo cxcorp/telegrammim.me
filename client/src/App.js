@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Banner from './Banner.js';
-import Buttons from './Buttons.js'
+import Button from './Button.js'
 import './styles/Reset.css';
 import './styles/App.css';
 
@@ -32,6 +32,14 @@ class App extends Component {
       });
   }
   
+  yesClicked() {
+
+  }
+
+  noClicked() {
+
+  }
+
   render() {
     if (this.state.data === null) {
       return (
@@ -45,7 +53,10 @@ class App extends Component {
       <div className='app'>
         <Banner header={this.state.data.banner} plural={this.state.data.plural} />
         <br />
-        <Buttons labels={this.state.data.buttons} />
+        <div className='app__buttons'>
+          <Button label={this.state.data.buttons.yes} color='#51cc84' action={this.yesClicked.bind(this)} />
+          <Button label={this.state.data.buttons.no} color='#e5675b' action={this.yesClicked.bind(this)} />
+        </div>
       </div>
     );
   }

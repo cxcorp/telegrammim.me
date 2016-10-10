@@ -1,7 +1,29 @@
+@keyframes button-jitter {
+  0% { transform: translate(0, 0) rotate(0); }
+  50% { transform: translate(-0.1em, 0.1em) rotate(2deg); }
+  100% { transform: translate(0.1em, -0.1em) rotate(-2deg); }
+}
+
 .button {
   cursor: pointer;
   display: inline-block;
   margin: 0 auto;
+  padding: 1em;
+  color: #fcfcfc;
+  font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+  font-size: 18px;
+}
+
+.button--animated {
+  animation: button-jitter;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.button--animated:nth-of-type(2n) {
+  animation-delay: 2s;
 }
 
 .button:first-of-type {

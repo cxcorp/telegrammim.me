@@ -4,12 +4,9 @@ html, body {
 
 body {
   background: #ffedbc;
-  background: -moz-linear-gradient(-45deg, #ffedbc 0%, #ed4264 100%);
-  background: -webkit-linear-gradient(-45deg, #ffedbc 0%,#ed4264 100%);
   background: linear-gradient(135deg, #ffedbc 0%,#ed4264 100%);
   background-repeat: no-repeat;
   background-attachment: fixed;
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffedbc', endColorstr='#ed4264',GradientType=1 );
   font-size: 16px;
   position: relative;
 }
