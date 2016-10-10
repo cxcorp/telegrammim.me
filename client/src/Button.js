@@ -3,12 +3,9 @@ import './styles/Button.css';
 
 const Button = ({label, color, action}) => {
     const style = {
-        borderColor: '#fcfcfc',
+        borderColor: color,
         borderWidth: '3px',
-        borderRadius: '3px',
-        borderStyle: 'solid',
-        boxShadow: '0 0 5px 0px ' + color,
-        textShadow: '1px 1px 3px ' + color
+        borderStyle: 'none none solid none'
     };
     return (
         <div className='button button--animated' style={style} onClick={action}>
