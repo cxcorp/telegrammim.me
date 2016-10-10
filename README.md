@@ -4,12 +4,12 @@ work in progress ~
 ## todo
 
 ### server
-- [ ] `Buttons` is bad and you should feel bad
-- [ ] use `filecache` instead of shabby own solution
+- [x] `Buttons` is bad and you should feel bad
+- [x] ~~use `filecache` instead of shabby own solution~~
 - [ ] recaptcha
 
 ### front
-- [ ] create button styles
+- [x] create button styles
 - [ ] create `yes` button modal/whatever for recaptcha
   - [ ] modal
   - [ ] recaptcha
