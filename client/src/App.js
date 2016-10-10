@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import Banner from './Banner.js';
 import Button from './Button.js'
+import GithubLink from './GithubLink.js';
 import './styles/Reset.css';
 import './styles/App.css';
+
+const GITHUB_URL = 'https://github.com/cxcorp/telegrammim.me';
 
 class App extends Component {
   constructor(props) {
@@ -66,13 +69,17 @@ class App extends Component {
     }
 
     return (
-      <div className='app'>
-        <Banner header={this.state.data.banner} plural={this.state.data.plural} />
-        <br />
-        <div className='app__buttons'>
-          <Button label={this.state.data.buttons.yes} color='#51cc84' action={this.yesClicked.bind(this)} />
-          <Button label={this.state.data.buttons.no} color='#c0392b' action={this.noClicked.bind(this)} />
+      <div className='app-container'>
+        <div className='app'>
+          <Banner header={this.state.data.banner} plural={this.state.data.plural} />
+          <br />
+          <div className='app__buttons'>
+            <Button label={this.state.data.buttons.yes} color='#51cc84' action={this.yesClicked.bind(this)} />
+            <Button label={this.state.data.buttons.no} color='#c0392b' action={this.noClicked.bind(this)} />
+          </div>
         </div>
+        
+        <GithubLink url={GITHUB_URL}>Liian paska läppä? Keksitkö paremman?</GithubLink>
       </div>
     );
   }

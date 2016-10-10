@@ -1,0 +1,24 @@
+.github-link {
+    font-size: 14px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: transform 100ms ease-in-out;
+}
+
+.github-link__anchor {
+    text-decoration: none;
+    color: rgba(12, 12, 12, 0.8);
+    font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
+}
+
+.github-link:hover {
+    color: rgba(12, 12, 12, 1.0);
+    transform: translateX(-0.3em);
+}
+
+.github-link__anchor__icon {
+    height: 1.25em;
+    vertical-align: middle;
+    padding: 0px 5px 5px 5px;
+}
