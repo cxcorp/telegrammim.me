@@ -8,7 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     
-    this.state = { data: null };
+    this.state = {
+      data: null
+    };
   }
 
   componentDidMount() {
@@ -33,7 +35,21 @@ class App extends Component {
   }
   
   yesClicked() {
-    alert('ayy');
+    fetch('/api/redirect',)
+      .then(res => {
+        if (res.status !== 200 && res.status !== 304) {
+          console.error('brokn', res);
+          return;
+        }
+
+        res.json()
+          .then(data => {
+            window.location = data.target;
+        });
+    })
+      .catch(err => {
+        console.error('fukd up', err);
+    });
   }
 
   noClicked() {

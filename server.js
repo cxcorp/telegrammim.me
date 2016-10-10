@@ -14,7 +14,7 @@ if (process.env.NODE_ENV === 'production') {
     app.use(express.static('./client/build'));
 }
 
-app.get('/api/random', function(req, res) {
+app.get('/api/random', (req, res) => {
     res.setHeader('Cache-Control', 'no-cache'); // no cacherino
     dataReader.read((err, data) => {
         if (err) {
@@ -28,7 +28,13 @@ app.get('/api/random', function(req, res) {
     });
 });
 
-app.listen(Config.Port, function() {
+app.get('/api/redirect', (req, res) => {
+    res.json({
+        target: Config.TelegramJoinLink
+    });
+});
+
+app.listen(Config.Port, () => {
     Logger.log('info', 'Server started!', {
         DataFile: Config.DataFile,
         Port: Config.Port
