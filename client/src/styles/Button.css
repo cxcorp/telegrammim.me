@@ -7,11 +7,15 @@
 .button {
   cursor: pointer;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0 2.5em;
   padding: 1em;
   font-family: 'Roboto Condensed', 'Arial Narrow', sans-serif;
   font-size: 20px;
   border-radius: 2px;
+}
+
+.button:first-of-type {
+  margin-bottom: 1em;
 }
 
 .button--animated {
@@ -24,8 +28,4 @@
 
 .button--animated:nth-of-type(2n) {
   animation-delay: 2s;
-}
-
-.button:first-of-type {
-  margin-right: 5em;
 }

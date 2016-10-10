@@ -19,8 +19,8 @@
         "banner": "Possessiivisuffiksimme",
         "plural": false,
         "buttons": {
-            "yes": "  ",
-            "no": "  "
+            "yes": "mme!",
+            "no": "mme?"
         }
     },
     {

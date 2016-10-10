@@ -2,11 +2,12 @@
   display: inline-block;
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 36px;
+  line-height: 1.3em;
 }
 
 .banner__punchline {
   display: inline-block;
-  padding: 12px;
+  padding: 2px 12px;
   font-size: 0.7em;
   position: relative;
   vertical-align: 0.12em;
