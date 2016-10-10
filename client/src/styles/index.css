@@ -11,4 +11,5 @@ body {
   background-attachment: fixed;
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffedbc', endColorstr='#ed4264',GradientType=1 );
   font-size: 16px;
+  position: relative;
 }
